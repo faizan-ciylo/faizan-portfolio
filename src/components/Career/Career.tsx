@@ -14,65 +14,30 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>QA Engineer</h4>
-                <h5>AppTestify | Full-time</h5>
+                <h4>Freelance AI/ML &amp; Software Consultant</h4>
+                <h5>Self-employed</h5>
               </div>
-              <h3>Aug 2021 - Aug 2023</h3>
+              <h3>Mar 2023 - Jan 2025</h3>
             </div>
             <p>
-              Performed functional and regression testing for web applications.
-              Worked closely with backend developers to identify root causes of defects.
+              Conducted 50+ online sessions tutoring Python and machine learning fundamentals. Assisted clients with
+              software debugging, design patterns, and requirement specifications, and delivered data analysis and
+              ML model training/evaluation projects.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Web Developer</h4>
-                <h5>MarqSet Branding | Part-time</h5>
+                <h4>AI Software Engineer</h4>
+                <h5>Next Generation Technology Solutions (NGTSOL) | Full-time</h5>
               </div>
-              <h3>Apr 2024 - May 2024</h3>
+              <h3>Jun 2025 - Present</h3>
             </div>
             <p>
-              Developed and customized WordPress websites for client projects.
-              Managed content, layouts, plugins, and PHP/MySQL backend tasks.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Backend &amp; QA Engineer</h4>
-                <h5>Acadify Solution | Apprenticeship</h5>
-              </div>
-              <h3>Aug 2024 - Nov 2025</h3>
-            </div>
-            <p>
-              Developed robust backend APIs and performed core system-level assessment to establish reliable functionality.
-              Worked across multi-tenant database architectures and backend structures.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>AI Systems Evaluation</h4>
-                <h5>Acadify Solution | Full-time</h5>
-              </div>
-              <h3>Nov 2025 - Now</h3>
-            </div>
-            <p>
-              Designed and executed enterprise-grade evaluation workflows for production-level LLM systems.
-              Led effort to map out failure patterns and introduce mitigations onto live system integrations.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Data Engineer</h4>
-                <h5>Krutsha | Apprenticeship</h5>
-              </div>
-              <h3>Feb 2026 - Now</h3>
-            </div>
-            <p>
-              Orchestrating scalable data workflows. Building high-performance pipelines for processing high-volume datasets while designing automated anomaly detection triggers for production dashboards.
+              Building production-grade intelligent systems combining Machine Learning, Generative AI, and agentic AI
+              with full-stack engineering. Shipped an AI SOC Analyst platform with a multi-tool agent integrating
+              Wazuh SIEM data and LLM-based alert triage, an AI-powered recruitment platform (PERN stack) with
+              semantic resume matching, and a custom ML model that auto-routes ServiceNow incidents with 83% accuracy.
             </p>
           </div>
         </div>

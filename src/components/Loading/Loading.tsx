@@ -3,33 +3,26 @@ import "./Loading.css";
 import { useLoading } from "../../context/LoadingProvider";
 
 import Marquee from "react-fast-marquee";
-import { FaPython, FaNodeJs, FaReact, FaGitAlt, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiPostgresql, SiMongodb, SiApachespark, SiApachekafka, SiApacheairflow, SiSnowflake, SiRedash, SiGooglesheets, SiWordpress, SiShopify, SiMarkdown, SiLatex, SiNextdotjs } from 'react-icons/si';
+import { FaPython, FaNodeJs, FaReact, FaGitAlt } from 'react-icons/fa';
+import { SiJavascript, SiPostgresql, SiTensorflow, SiPytorch, SiKeras, SiScikitlearn, SiOpencv, SiLangchain, SiJupyter, SiHuggingface } from 'react-icons/si';
 
 const dataIcons = [
   { Icon: FaPython, name: "Python" },
-  { Icon: SiApachespark, name: "Spark" },
-  { Icon: SiApachekafka, name: "Kafka" },
-  { Icon: SiApacheairflow, name: "Airflow" },
-  { Icon: SiSnowflake, name: "Snowflake" },
-  { Icon: SiPostgresql, name: "Postgres" },
-  { Icon: SiMongodb, name: "MongoDB" },
-  { Icon: SiRedash, name: "Redash" }
+  { Icon: SiTensorflow, name: "TensorFlow" },
+  { Icon: SiPytorch, name: "PyTorch" },
+  { Icon: SiKeras, name: "Keras" },
+  { Icon: SiScikitlearn, name: "Scikit-learn" },
+  { Icon: SiOpencv, name: "OpenCV" },
+  { Icon: SiHuggingface, name: "Transformers" },
+  { Icon: SiJupyter, name: "Jupyter" }
 ];
 
 const webIcons = [
-  { Icon: SiJavascript, name: "Javascript" },
-  { Icon: SiTypescript, name: "Typescript" },
-  { Icon: FaNodeJs, name: "Node" },
   { Icon: FaReact, name: "React" },
-  { Icon: SiNextdotjs, name: "Next.js" },
-  { Icon: FaHtml5, name: "HTML5" },
-  { Icon: FaCss3Alt, name: "CSS3" },
-  { Icon: SiGooglesheets, name: "Sheets" },
-  { Icon: SiWordpress, name: "WordPress" },
-  { Icon: SiShopify, name: "Shopify" },
-  { Icon: SiMarkdown, name: "Markdown" },
-  { Icon: SiLatex, name: "LaTeX" },
+  { Icon: FaNodeJs, name: "Node" },
+  { Icon: SiJavascript, name: "JavaScript" },
+  { Icon: SiPostgresql, name: "PostgreSQL" },
+  { Icon: SiLangchain, name: "LangChain" },
   { Icon: FaGitAlt, name: "Git" }
 ];
 
@@ -75,7 +68,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          PR
+          MF
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -107,8 +100,8 @@ const Loading = ({ percent }: { percent: number }) => {
             ))}
           </Marquee>
           <Marquee speed={40}>
-            <span>Data Engineer</span> <span>Analytics</span>
-            <span>Data Engineer</span> <span>Analytics</span>
+            <span>AI Software Engineer</span> <span>Machine Learning</span>
+            <span>AI Software Engineer</span> <span>Machine Learning</span>
           </Marquee>
           <Marquee direction="right" speed={60}>
             {[...dataIcons].reverse().map((tech, i) => (

@@ -6,15 +6,15 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I am building my career as a <b>Data Engineer</b> with a focus on data pipelines, data quality, observability, and how data behaves in real world systems. I approach data with an <b>engineering mindset</b> and focus on where data breaks, drifts, or loses meaning over time.
+          I am an <b>AI Software Engineer</b> building production-grade intelligent systems that combine Machine Learning, Generative AI, and agentic AI with full-stack engineering. I approach AI with an <b>engineering mindset</b>, focused on how models behave, fail, and hold up once they leave a notebook and enter a real product.
         </p>
 
         <p className="para">
-          My background includes QA Engineering, Backend Systems, AI Model Evaluation, and Web Development. This experience helps me understand the full lifecycle of data from the source to the product backend.
+          My background spans NLP, computer vision, and full-stack development. At Next Generation Technology Solutions I've built a multi-tool AI SOC analyst platform, an AI-powered recruitment platform with semantic resume matching, and a custom ML model that routes ServiceNow incidents with 83% accuracy — all shipped with React, Node.js, and PostgreSQL.
         </p>
 
         <p className="para">
-          I am driven by continuous learning and system architecture. I have also published research with <b>IEEE</b> on data transparency and platform assurance.
+          I'm driven by hands-on experimentation, from fine-tuning <b>BERT</b> on custom datasets to building a real-time gesture classifier from scratch. My final year project, an AI-powered interviewing platform, won <b>1st Prize</b> at Bahria University's AI Innofest 2025.
         </p>
       </div>
     </div>

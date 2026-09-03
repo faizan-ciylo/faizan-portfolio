@@ -87,22 +87,22 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DATA ENGINEERING</h3>
-              <h4>Pipelines, Quality & Observability</h4>
+              <h3>AI &amp; MACHINE LEARNING</h3>
+              <h4>Deep Learning, NLP &amp; Computer Vision</h4>
               <p>
-                Building scalable data pipelines, validating data accuracy, and ensuring
-                quality across real-world systems. I approach data with an engineering mindset.
+                Building and fine-tuning models across NLP, computer vision, and deep learning —
+                from BERT intent classifiers to face verification pipelines.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">PySpark</div>
-                <div className="what-tags">Power BI</div>
-                <div className="what-tags">ETL Pipelines</div>
-                <div className="what-tags">Data Modeling</div>
-                <div className="what-tags">SQL / Python</div>
-                <div className="what-tags">Data Quality</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">MongoDB</div>
+                <div className="what-tags">TensorFlow</div>
+                <div className="what-tags">PyTorch</div>
+                <div className="what-tags">Keras</div>
+                <div className="what-tags">Scikit-learn</div>
+                <div className="what-tags">OpenCV / DeepFace</div>
+                <div className="what-tags">CNNs / RNNs</div>
+                <div className="what-tags">BERT / NLP</div>
+                <div className="what-tags">NumPy / Pandas</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -126,22 +126,22 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>AI & QUALITY SYSTEMS</h3>
-              <h4>Evaluations & System Reliability</h4>
+              <h3>GENERATIVE &amp; AGENTIC AI</h3>
+              <h4>LLMs, RAG &amp; AI Agents</h4>
               <p>
-                Designing structured evaluation workflows for LLM-based systems.
-                Analyzing failures, hallucinations, and maintaining API resilience.
+                Designing multi-tool AI agents, RAG pipelines, and workflow automation that plug
+                LLMs into real enterprise systems and decision-making.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">LLM Benchmarking</div>
-                <div className="what-tags">Prompt Review</div>
-                <div className="what-tags">Model Reliability</div>
-                <div className="what-tags">Behavioral Testing</div>
-                <div className="what-tags">API Resilience</div>
-                <div className="what-tags">Functional Testing</div>
-                <div className="what-tags">Postman / APIs</div>
-                <div className="what-tags">Node.js</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">RAG</div>
+                <div className="what-tags">AI Agents</div>
+                <div className="what-tags">Vector DBs / Pgvector</div>
+                <div className="what-tags">Embeddings</div>
+                <div className="what-tags">Semantic Search</div>
+                <div className="what-tags">Speech-to-Text / TTS</div>
+                <div className="what-tags">Workflow Automation</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -165,22 +165,22 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BACKEND SYSTEMS</h3>
-              <h4>APIs, Databases &amp; Architecture</h4>
+              <h3>FULL-STACK ENGINEERING</h3>
+              <h4>APIs, Databases &amp; Production Systems</h4>
               <p>
-                Engineering REST APIs, relational schemas, and auth systems
-                across 6+ production-grade backend applications.
+                Shipping the AI into a real product — REST APIs, relational schemas, and
+                scalable architecture across MERN/PERN stack applications.
               </p>
               <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">React</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
                 <div className="what-tags">Express.js</div>
                 <div className="what-tags">REST APIs</div>
-                <div className="what-tags">JWT Auth</div>
-                <div className="what-tags">MongoDB</div>
                 <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">Prisma ORM</div>
+                <div className="what-tags">SQL</div>
+                <div className="what-tags">Git</div>
+                <div className="what-tags">Agile</div>
               </div>
               <div className="what-arrow"></div>
             </div>

@@ -24,6 +24,16 @@
   max-width: 420px;
 }
 
+.contact-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accentColor);
+  box-shadow: 0 0 20px rgba(94, 234, 212, 0.25);
+  margin-bottom: 20px;
+}
+
 .contact-status-row {
   display: flex;
   align-items: center;
