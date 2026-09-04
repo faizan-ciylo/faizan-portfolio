@@ -270,6 +270,14 @@ const TechStack = () => {
           <N8AO color="#000000" aoRadius={1} intensity={0.2} />
         </EffectComposer>
       </Canvas>
+
+      {/* The 3D balloon text is decorative and hard to read in motion —
+          list the same stack in plain text so it's actually legible. */}
+      <ul className="techstack-list">
+        {techItems.map((tech) => (
+          <li key={tech.text}>{tech.text}</li>
+        ))}
+      </ul>
     </div>
   );
 };

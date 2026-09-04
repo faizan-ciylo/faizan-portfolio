@@ -16,7 +16,7 @@ const Contact = () => {
         {/* LEFT: Text Content */}
         <div className="contact-left">
           <img
-            src="/images/faizan_pic.jpg"
+            src="/images/profile_pic.jpg"
             alt="Muhammad Faizan"
             className="contact-avatar"
           />

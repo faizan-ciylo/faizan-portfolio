@@ -5,7 +5,7 @@ const skills = [
     title: "AI & Machine Learning",
     subtitle: "Deep Learning, NLP & Computer Vision",
     description:
-      "Building and fine-tuning models across NLP, computer vision, and deep learning — from BERT intent classifiers to face verification pipelines.",
+      "Building and fine-tuning models across NLP, computer vision, and deep learning, from BERT intent classifiers to face verification pipelines.",
     tags: [
       "TensorFlow",
       "PyTorch",
@@ -37,7 +37,7 @@ const skills = [
     title: "Full-Stack Engineering",
     subtitle: "APIs, Databases & Production Systems",
     description:
-      "Shipping the AI into a real product — REST APIs, relational schemas, and scalable architecture across MERN/PERN stack applications.",
+      "Shipping the AI into a real product: REST APIs, relational schemas, and scalable architecture across MERN/PERN stack applications.",
     tags: [
       "React",
       "Node.js",
