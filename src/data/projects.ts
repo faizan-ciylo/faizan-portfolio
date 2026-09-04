@@ -3,7 +3,7 @@ export const projects = [
     title: "AI SOC Analyst",
     category: "NGTSOL · Agentic AI · Cybersecurity",
     description:
-      "Built a multi-tool AI agent integrating Wazuh SIEM data, automated health monitoring, and threat intelligence enrichment — using LLM-based alert summarization and investigation-plan generation to give analysts triage that arrives already investigated.",
+      "Built a multi-tool AI agent integrating Wazuh SIEM data, automated health monitoring, and threat intelligence enrichment. Uses LLM-based alert summarization and investigation-plan generation to give analysts triage that arrives already investigated.",
     tools: "Python, LangChain, Wazuh, PostgreSQL, React",
     image: "/images/ai-soc-analyst.png",
   },
@@ -11,7 +11,7 @@ export const projects = [
     title: "AI-Powered Recruitment Platform",
     category: "NGTSOL · Generative AI · Full-Stack (PERN)",
     description:
-      "Architected an AI-powered recruitment platform on the PERN stack with semantic resume parsing, pgvector-based candidate-job matching, and a job posting/approval workflow — cutting manual screening effort and improving hiring efficiency.",
+      "Architected an AI-powered recruitment platform on the PERN stack with semantic resume parsing, pgvector-based candidate-job matching, and a job posting/approval workflow. Cut manual screening effort and improved hiring efficiency.",
     tools: "React, Node.js, Express, PostgreSQL, pgvector",
     image: "/images/ai-recruitment-platform.png",
   },

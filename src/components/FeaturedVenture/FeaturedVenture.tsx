@@ -22,7 +22,7 @@ const FeaturedVenture = () => {
                         <p className="venture-category">AI Agents · LLMs · Computer Vision · Full-Stack</p>
                         <p className="venture-status">🏆 1st Prize &nbsp;·&nbsp; Bahria University AI Innofest 2025</p>
                         <p className="venture-desc">
-                            An AI-driven interview automation platform that acts as a virtual interviewer — generating
+                            An AI-driven interview automation platform that acts as a virtual interviewer, generating
                             dynamic, context-aware questions with LLMs and evaluating candidate responses in real time,
                             including confidence prediction and cheating detection via DeepFace + MTCNN face verification.
                             Reduced manual screening time by ~70% and improved shortlisting efficiency for hiring teams.

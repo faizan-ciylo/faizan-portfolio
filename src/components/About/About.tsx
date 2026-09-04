@@ -14,7 +14,7 @@ const About = () => {
           </p>
 
           <p className="para">
-            My background spans NLP, computer vision, and full-stack development. At Next Generation Technology Solutions I've built a multi-tool AI SOC analyst platform, an AI-powered recruitment platform with semantic resume matching, and a custom ML model that routes ServiceNow incidents with 83% accuracy — all shipped with React, Node.js, and PostgreSQL.
+            My background spans NLP, computer vision, and full-stack development. At Next Generation Technology Solutions I've built a multi-tool AI SOC analyst platform, an AI-powered recruitment platform with semantic resume matching, and a custom ML model that routes ServiceNow incidents with 83% accuracy, all shipped with React, Node.js, and PostgreSQL.
           </p>
 
           <p className="para">

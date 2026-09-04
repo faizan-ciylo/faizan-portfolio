@@ -1,7 +1,7 @@
 # 3D Interactive Portfolio | Muhammad Faizan
 
 A high-performance, responsive 3D interactive portfolio website featuring rigid-body physics
-simulations, glassmorphic UI, and smooth-scroll interactions — showcasing my work as an AI
+simulations, glassmorphic UI, and smooth-scroll interactions. Showcases my work as an AI
 Software Engineer / Machine Learning Engineer.
 
 ## 🛠️ Tech Stack
@@ -24,5 +24,5 @@ Software Engineer / Machine Learning Engineer.
 ## 📎 Notes
 - This project was forked from an open 3D portfolio template; see [LICENSE](LICENSE) for
   provenance notes on the 3D character asset.
-- Some project preview images are placeholder graphics pending real screenshots/demos —
+- Some project preview images are placeholder graphics pending real screenshots/demos,
   see the `public/images/*.svg` files.
