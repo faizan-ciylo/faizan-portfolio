@@ -5,3 +5,10 @@ dist/
 .env
 .artifacts/
 *.tsbuildinfo
+
+# Unencrypted source model - not used at runtime (only character.enc is
+# loaded/decrypted client-side); kept locally for future edits, but must
+# never be committed - it was LFS-tracked and broke Netlify's build (no
+# LFS support), and publicly shipping it would defeat the point of
+# encrypting character.enc in the first place.
+public/models/character.glb
