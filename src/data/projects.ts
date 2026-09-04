@@ -29,7 +29,7 @@ export const projects = [
     description:
       "Fine-tuned BERT on a customized, self-collected dataset for high-accuracy intent classification in NLP tasks.",
     tools: "BERT, Transformers, Python, NLP",
-    image: "/images/bert-fine-tuning.svg",
+    image: "/images/bert-fine-tuning.png",
   },
   {
     title: "Networking Tool Development",
