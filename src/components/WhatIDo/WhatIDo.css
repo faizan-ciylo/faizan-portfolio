@@ -7,6 +7,19 @@
   z-index: 9;
 }
 
+/* The character is `position: fixed; z-index: 11` on desktop (Landing.css) and
+   is only moved out of the way by a scroll-scrubbed transform, not hidden —
+   so its exact timing can drift from a section's actual height and it bleeds
+   through on top of content. Giving this section its own opaque backdrop
+   above that z-index guarantees it can never show through, regardless of
+   how the transform timing lines up. */
+@media only screen and (min-width: 1025px) {
+  .whatIDO {
+    z-index: 12;
+    background: var(--backgroundColor);
+  }
+}
+
 .what-header {
   margin-bottom: 50px;
 }

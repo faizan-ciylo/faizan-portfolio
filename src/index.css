@@ -20,6 +20,7 @@
   -moz-user-select: none;
   --accentColor: #5eead4;
   --backgroundColor: #0a0e17;
+  --textColor: #eae5ec;
   --vh: 100vh;
   --vh: 100svh;
 }
@@ -111,10 +112,53 @@ body {
   margin: auto;
   margin-top: 50px;
   margin-bottom: -100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .techstack h2 {
   font-family: inherit;
+}
+
+.tech-canvas {
+  flex: 1;
+  min-height: 0;
+}
+
+.techstack-list {
+  position: relative;
+  z-index: 4;
+  list-style: none;
+  margin: 0;
+  padding: 0 5% 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 14px;
+  pointer-events: none;
+}
+
+.techstack-list li {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #94a3b8;
+  padding: 5px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media only screen and (max-width: 700px) {
+  .techstack-list {
+    padding: 0 5% 30px;
+    gap: 8px 10px;
+  }
+
+  .techstack-list li {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
