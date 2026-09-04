@@ -1,209 +1,84 @@
-import { useEffect, useRef } from "react";
 import "./WhatIDo.css";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const skills = [
+  {
+    title: "AI & Machine Learning",
+    subtitle: "Deep Learning, NLP & Computer Vision",
+    description:
+      "Building and fine-tuning models across NLP, computer vision, and deep learning — from BERT intent classifiers to face verification pipelines.",
+    tags: [
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "Scikit-learn",
+      "OpenCV / DeepFace",
+      "CNNs / RNNs",
+      "BERT / NLP",
+      "NumPy / Pandas",
+    ],
+  },
+  {
+    title: "Generative & Agentic AI",
+    subtitle: "LLMs, RAG & AI Agents",
+    description:
+      "Designing multi-tool AI agents, RAG pipelines, and workflow automation that plug LLMs into real enterprise systems and decision-making.",
+    tags: [
+      "LangChain",
+      "RAG",
+      "AI Agents",
+      "Vector DBs / Pgvector",
+      "Embeddings",
+      "Semantic Search",
+      "Speech-to-Text / TTS",
+      "Workflow Automation",
+    ],
+  },
+  {
+    title: "Full-Stack Engineering",
+    subtitle: "APIs, Databases & Production Systems",
+    description:
+      "Shipping the AI into a real product — REST APIs, relational schemas, and scalable architecture across MERN/PERN stack applications.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "PostgreSQL",
+      "SQL",
+      "Git",
+      "Agile",
+    ],
+  },
+];
 
 const WhatIDo = () => {
-  const containerRef = useRef<(HTMLDivElement | null)[]>([]);
-  const setRef = (el: HTMLDivElement | null, index: number) => {
-    containerRef.current[index] = el;
-  };
-  useEffect(() => {
-    if (ScrollTrigger.isTouch) {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.classList.remove("what-noTouch");
-          container.addEventListener("click", () => handleClick(container));
-        }
-      });
-    }
-    return () => {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.removeEventListener("click", () => handleClick(container));
-        }
-      });
-    };
-  }, []);
   return (
     <div className="whatIDO">
-      <div className="what-box">
+      <div className="what-header">
         <h2 className="title">
-          W<span className="hat-h2">HAT</span>
-          <div>
-            I<span className="do-h2"> DO</span>
-          </div>
+          W<span className="hat-h2">HAT</span> I<span className="do-h2"> DO</span>
         </h2>
       </div>
-      <div className="what-box">
-        <div className="what-box-in">
-          <div className="what-border2">
-            <svg width="100%">
-              <line
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-              <line
-                x1="100%"
-                y1="0"
-                x2="100%"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-            </svg>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 0)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
 
-            <div className="what-content-in">
-              <h3>AI &amp; MACHINE LEARNING</h3>
-              <h4>Deep Learning, NLP &amp; Computer Vision</h4>
-              <p>
-                Building and fine-tuning models across NLP, computer vision, and deep learning —
-                from BERT intent classifiers to face verification pipelines.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">TensorFlow</div>
-                <div className="what-tags">PyTorch</div>
-                <div className="what-tags">Keras</div>
-                <div className="what-tags">Scikit-learn</div>
-                <div className="what-tags">OpenCV / DeepFace</div>
-                <div className="what-tags">CNNs / RNNs</div>
-                <div className="what-tags">BERT / NLP</div>
-                <div className="what-tags">NumPy / Pandas</div>
-              </div>
-              <div className="what-arrow"></div>
+      <div className="what-grid">
+        {skills.map((skill) => (
+          <div className="what-card" key={skill.title}>
+            <div className="what-card-glow"></div>
+            <h3>{skill.title}</h3>
+            <h4>{skill.subtitle}</h4>
+            <p>{skill.description}</p>
+            <div className="what-tags-row">
+              {skill.tags.map((tag) => (
+                <span className="what-tags" key={tag}>
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 1)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>GENERATIVE &amp; AGENTIC AI</h3>
-              <h4>LLMs, RAG &amp; AI Agents</h4>
-              <p>
-                Designing multi-tool AI agents, RAG pipelines, and workflow automation that plug
-                LLMs into real enterprise systems and decision-making.
-              </p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">LangChain</div>
-                <div className="what-tags">RAG</div>
-                <div className="what-tags">AI Agents</div>
-                <div className="what-tags">Vector DBs / Pgvector</div>
-                <div className="what-tags">Embeddings</div>
-                <div className="what-tags">Semantic Search</div>
-                <div className="what-tags">Speech-to-Text / TTS</div>
-                <div className="what-tags">Workflow Automation</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 2)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>FULL-STACK ENGINEERING</h3>
-              <h4>APIs, Databases &amp; Production Systems</h4>
-              <p>
-                Shipping the AI into a real product — REST APIs, relational schemas, and
-                scalable architecture across MERN/PERN stack applications.
-              </p>
-              <h5>Skillset &amp; tools</h5>
-              <div className="what-content-flex">
-                <div className="what-tags">React</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">SQL</div>
-                <div className="what-tags">Git</div>
-                <div className="what-tags">Agile</div>
-              </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
 export default WhatIDo;
-
-function handleClick(container: HTMLDivElement) {
-  container.classList.toggle("what-content-active");
-  container.classList.remove("what-sibling");
-  if (container.parentElement) {
-    const siblings = Array.from(container.parentElement.children);
-
-    siblings.forEach((sibling) => {
-      if (sibling !== container) {
-        sibling.classList.remove("what-content-active");
-        sibling.classList.toggle("what-sibling");
-      }
-    });
-  }
-}

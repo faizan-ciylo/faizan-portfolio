@@ -19,7 +19,7 @@ const Scene = () => {
   const sceneRef = useRef(new THREE.Scene());
   const { setLoading } = useLoading();
 
-  const [character, setChar] = useState<THREE.Object3D | null>(null);
+  const [, setChar] = useState<THREE.Object3D | null>(null);
   useEffect(() => {
     if (canvasDiv.current) {
       const rect = canvasDiv.current.getBoundingClientRect();
@@ -53,7 +53,17 @@ const Scene = () => {
       const progress = setProgress((value: number) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
+      // Guards against this effect's async work landing after the component
+      // has unmounted (e.g. crossing the mobile/desktop breakpoint remounts
+      // Scene) — without this, a stale instance could still turn on lights
+      // or rebuild scroll timelines for a character no longer on screen,
+      // clobbering the currently-active one.
+      let cancelled = false;
+      let onResize: (() => void) | null = null;
+      let introTimeout: ReturnType<typeof setTimeout> | undefined;
+
       loadCharacter().then((gltf) => {
+        if (cancelled) return;
         if (gltf) {
           const animations = setAnimations(gltf);
           if (hoverDivRef.current) {
@@ -66,14 +76,15 @@ const Scene = () => {
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
-            setTimeout(() => {
+            if (cancelled) return;
+            introTimeout = setTimeout(() => {
+              if (cancelled) return;
               light.turnOnLights();
               animations.startIntro();
             }, 2500);
           });
-          window.addEventListener("resize", () =>
-            handleResize(renderer, camera, canvasDiv, character)
-          );
+          onResize = () => handleResize(renderer, camera, canvasDiv, character);
+          window.addEventListener("resize", onResize);
         }
       });
 
@@ -109,7 +120,6 @@ const Scene = () => {
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
       const animate = () => {
-        requestAnimationFrame(animate);
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -126,15 +136,19 @@ const Scene = () => {
           mixer.update(delta);
         }
         renderer.render(scene, camera);
+        rafId = requestAnimationFrame(animate);
       };
-      animate();
+      let rafId = requestAnimationFrame(animate);
       return () => {
+        cancelled = true;
+        cancelAnimationFrame(rafId);
         clearTimeout(debounce);
+        clearTimeout(introTimeout);
         scene.clear();
         renderer.dispose();
-        window.removeEventListener("resize", () =>
-          handleResize(renderer, camera, canvasDiv, character!)
-        );
+        if (onResize) {
+          window.removeEventListener("resize", onResize);
+        }
         if (canvasDiv.current) {
           canvasDiv.current.removeChild(renderer.domElement);
         }

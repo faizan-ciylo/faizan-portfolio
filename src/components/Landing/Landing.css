@@ -106,8 +106,7 @@
 }
 
 .character-model {
-  height: 80%;
-  height: 80vh;
+  height: 50vh;
   position: absolute;
   max-width: 1920px;
   max-height: 1080px;

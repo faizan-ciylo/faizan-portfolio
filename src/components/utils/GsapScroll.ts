@@ -1,16 +1,35 @@
 import * as THREE from "three";
 import gsap from "gsap";
 
+// IDs for every ScrollTrigger this module owns, so a resize rebuild can kill
+// exactly these (see resizeUtils.ts) instead of every trigger on the page —
+// killing unrelated triggers (e.g. Research's fade-in) left them stuck at
+// their pre-animation state (opacity: 0) with nothing left to revive them.
+export const CHAR_TRIGGER_IDS = [
+  "char-landing",
+  "char-about",
+  "char-whatido",
+];
+export const ALL_TRIGGER_IDS = [
+  ...CHAR_TRIGGER_IDS,
+  "career-timeline",
+  "education-timeline",
+];
+
+let intensityInterval: ReturnType<typeof setInterval> | undefined;
+
 export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
   camera: THREE.PerspectiveCamera
 ) {
   let intensity: number = 0;
-  setInterval(() => {
+  clearInterval(intensityInterval);
+  intensityInterval = setInterval(() => {
     intensity = Math.random();
   }, 200);
   const tl1 = gsap.timeline({
     scrollTrigger: {
+      id: "char-landing",
       trigger: ".landing-section",
       start: "top top",
       end: "bottom top",
@@ -20,6 +39,7 @@ export function setCharTimeline(
   });
   const tl2 = gsap.timeline({
     scrollTrigger: {
+      id: "char-about",
       trigger: ".about-section",
       start: "center 55%",
       end: "bottom top",
@@ -29,6 +49,7 @@ export function setCharTimeline(
   });
   const tl3 = gsap.timeline({
     scrollTrigger: {
+      id: "char-whatido",
       trigger: ".whatIDO",
       start: "top top",
       end: "bottom top",
@@ -90,12 +111,6 @@ export function setCharTimeline(
         .to(monitor.material, { opacity: 1, duration: 0.8, delay: 3.2 }, 0)
         .to(screenLight.material, { opacity: 1, duration: 0.8, delay: 4.5 }, 0)
         .fromTo(
-          ".what-box-in",
-          { display: "none" },
-          { display: "flex", duration: 0.1, delay: 6 },
-          0
-        )
-        .fromTo(
           monitor.position,
           { y: -10, z: 2 },
           { y: 0, z: 0, delay: 1.5, duration: 3 },
@@ -118,23 +133,13 @@ export function setCharTimeline(
         .fromTo(".whatIDO", { y: 0 }, { y: "15%", duration: 2 }, 0)
         .to(character.rotation, { x: -0.04, duration: 2, delay: 1 }, 0);
     }
-  } else {
-    if (character) {
-      const tM2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".what-box-in",
-          start: "top 70%",
-          end: "bottom top",
-        },
-      });
-      tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
-    }
   }
 }
 
 export function setAllTimeline() {
   const careerTimeline = gsap.timeline({
     scrollTrigger: {
+      id: "career-timeline",
       trigger: ".career-section",
       start: "top 30%",
       end: "100% center",
@@ -192,6 +197,7 @@ export function setAllTimeline() {
   // Education timeline
   const eduTimeline = gsap.timeline({
     scrollTrigger: {
+      id: "education-timeline",
       trigger: ".education-section",
       start: "top 30%",
       end: "100% center",
