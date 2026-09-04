@@ -1,13 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "../HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { IoClose } from "react-icons/io5";
 import "./Navbar.css";
 
 export let smoother: any;
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     smoother = new Lenis({
       duration: 1.2,
@@ -59,7 +63,19 @@ const Navbar = () => {
         >
           muhammadfaizansgc@gmail.com
         </a>
-        <ul>
+        <button
+          className="navbar-toggle"
+          data-cursor="disable"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <IoClose /> : <BsThreeDotsVertical />}
+        </button>
+        <ul
+          className={isMenuOpen ? "nav-open" : ""}
+          onClick={() => setIsMenuOpen(false)}
+        >
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
